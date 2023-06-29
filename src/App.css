@@ -1,38 +1,263 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla&family=Markazi+Text:wght@500&display=swap');
+*, ::before, ::after {
+  box-sizing: border-box;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  margin:0;
+  padding: 0;
+  font-family: 'Karla', sans-serif, 'Markazi Text', serif;
+  color: #333333;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+img{width:100%;height: auto;display: block;}
+a{text-decoration: none;color: inherit;}
+.menu ul li a.active{
+  background-color: #495E57;
+  color: #fff;
+  padding: 6px 8px;
+  border-radius: 6px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.color-matte-green{
+  color:#495E57;
+}
+.color-lemon-yellow{
+  color:#F4CE14;
+}
+.btn-lemon {
+  background-color: #F4CE14;
+  color: #000;
+  font-weight: 600;
+  border-radius: 15px;
+  padding: 10px 20px;
+  display: inline-block;
+  border: none;
+}
+.d-flex{
+  display:flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
-
-.App-link {
-  color: #61dafb;
+.mx-auto{margin: 0 auto;}
+.justify-between{justify-content:space-between;}
+.align-stretch{align-items: stretch;}
+.pos-relative{position:relative;}
+.menu ul{margin: 0;padding: 0;}
+.menu ul li {
+  display: inline-block;
+  list-style-type: none;
+  padding: 0 20px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.menu ul li a{font-family: 'Karla', sans-serif;color:#000;font-weight:600;padding: 8px 5px;border-radius: 6px;}
+.menu ul li a:hover {
+  background-color: #f7cf3f;
+}
+header{padding: 20px 0;}
+.site-logo img{width: 170px;height:auto;}
+section.intro {background-color: #495e57;padding: 40px 0;}
+.intro-content{
+  width: 36%;
+  display: block;
+}
+.intro-img {
+  width: 40%;
+}
+.intro-content h1 {
+  margin: 5px 0;
+  font-size: 55px;
+  color: #d5b208;
+  font-family: 'Markazi Text';
+  font-weight: 500;
+}
+.intro-content h1 span {
+  display: block;
+  font-size: 35px;
+  line-height: 10px;
+  font-weight: 100;
+  color: #fff;
+}
+.intro-content p {
+  color: #fff;
+}
+.intro-img {
+  width: 35%;
+  position: absolute;
+  border-radius: 15px;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+}
+.about{
+  background-color: #eeeeee;
+}
+.about .intro-img{position: relative;}
+.about .intro-content p{color: #000000;}
+.about h1 span{color: #495E57;}
+.week-spl {
+  margin-top: 120px;
+  margin-bottom: 50px;
+}
+.week-spl h2{
+  font-family:'Markazi Text';
+  font-size: 45px;
+  margin: 0;
+}
+.food-items{
+  margin-bottom: 30px;
+}
+.food-card {
+  width: 30%;
+  margin: 10px 0;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  overflow: hidden;
+  background-color: #edefee;
+  padding-bottom: 60px;
+  position: relative;
+}
+.food-content{
+  padding: 0 20px;
+}.food-content h3 {
+  font-family: 'Markazi Text';
+  font-size: 28px;
+  font-weight: 500;
+  margin: 15px 0;
+}
+.food-content a {
+  color: #000000;
+  position: absolute;
+  bottom: 25px;
+  font-weight: 600;
+  display: block;
+}
+.food-content span {
+  color: #ee9172;
+  font-weight: 600;
+}
+.food-content a:after{
+  content:"";
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAABSElEQVR4nO2Uu0qDQRBGTyMIIoJYSNTCIBEEy9R5DhtBBAvfQMnD2KoERdQyiKksfABNreIlavBWmZWFEZZl2Uv880tCPphm9ps5y+ywMFSfqgp8AEqiZ2oYEFcMHtjWugBvgTFy1ATwKfAtctaegO+B0f8YtwLWsloWJR6flgzvRZbg80CPccPbAWZj4X+VCdaxmRd42QLXQgWLwFnEqEPatvxNn7kEPEdAQ+BJ4MHyv/sKDiKhyrMs+m3rDv+bvPOIq+glAXxqwfVvtQJcB+ougWkbXAZ2gK+EC3QTTWDKhi8Ajz0GK+DQBu/LwREwD2wAVxlDb4CKDW7LYcHIFYyib0/DjlxyFWhJrmj0KUruzrVgv2BzceYk90q8kvvU5PBYinScSE4/Q6yS+5SAJ8cYW7J4seqqzwywK+Nqyw1ToFn3GaqP9QNHcgErl+jpJQAAAABJRU5ErkJggg==);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-left: 7px;
+}
+footer{
+  background-color: #495E57;
+  padding: 65px 0;
+  color: #fff;
+}
+.footer-content img {
+  height: 160px;
+}
+.footer-content h4{margin: 0;}
+.footer-content ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.footer-content ul li{
+  margin: 10px 0;
+}
+.copyright{
+  text-align: center;
+  color: #f4ce14;
+}
+@media (min-width: 768px){
+  .container{
+      max-width: 720px;
   }
-  to {
-    transform: rotate(360deg);
+}
+@media (min-width: 992px){
+  .container{
+      max-width: 960px;
   }
+  .mobmenu {display: none;}
+}
+@media (min-width: 1200px){
+  .container{
+      max-width: 945px;
+  }
+}
+@media (max-width: 530px){
+  .intro-content h1{font-size: 35px;}
+  .intro-content h1 span{font-size: 30px;}
+  .about .intro-content, .about .intro-img, .bookingTablecolm, .reservation .half-col{width: 100%;}
+  .about .d-flex, .footer-content, .reservation > .d-flex{flex-wrap: wrap;}
+  .footer-content img{width: 90px;}
+  .footer-content div{width: 50%;margin-bottom: 10px;}
+}
+@media (max-width: 767px){
+  .container{max-width:95%;}
+  .food-items .d-flex{flex-wrap: wrap;}
+  .food-card{width:100%;}
+  .intro-content{width: 60%;}
+  .intro-img{width: 40%;}
+}
+@media (max-width: 991px){
+nav{
+  position: fixed;
+  width: 100%;
+  height: 75px;
+  background: #f4f4f4;
+  top: 0;
+  z-index: 100;
+}
+.menu ul{
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 75px;
+  left: 0;
+  right: 0;
+  background-color: #ccc;
+  z-index: 100;
+}
+.menu ul li{
+  display: block;
+  padding: 10px 20px;
+}
+.site-logo{position: relative;top: 15px;}
+.mobmenu {
+  display: block;
+  position: fixed;
+  top: 15px;
+  right: 15px;
+}
+.navClose{display: none;}
+.navOpen{display: block;}
+button {
+  cursor: pointer;
+  background: transparent;;
+  border: none;
+  font-size: 20px;
+}
+i.btnOpen, i.btnClose{
+  width: 45px;
+  height: 45px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 5px;
+  background-position: bottom center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+i.btnOpen{
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciICB2aWV3Qm94PSIwIDAgNTAgNTAiIHdpZHRoPSI1MHB4IiBoZWlnaHQ9IjUwcHgiPjxwYXRoIGQ9Ik0gMyA4IEEgMi4wMDAyIDIuMDAwMiAwIDEgMCAzIDEyIEwgNDcgMTIgQSAyLjAwMDIgMi4wMDAyIDAgMSAwIDQ3IDggTCAzIDggeiBNIDMgMjMgQSAyLjAwMDIgMi4wMDAyIDAgMSAwIDMgMjcgTCA0NyAyNyBBIDIuMDAwMiAyLjAwMDIgMCAxIDAgNDcgMjMgTCAzIDIzIHogTSAzIDM4IEEgMi4wMDAyIDIuMDAwMiAwIDEgMCAzIDQyIEwgNDcgNDIgQSAyLjAwMDIgMi4wMDAyIDAgMSAwIDQ3IDM4IEwgMyAzOCB6Ii8+PC9zdmc+");
+}
+i.btnClose {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciICB2aWV3Qm94PSIwIDAgNTAgNTAiIHdpZHRoPSI1MHB4IiBoZWlnaHQ9IjUwcHgiPjxwYXRoIGQ9Ik0gOS4xNTYyNSA2LjMxMjUgTCA2LjMxMjUgOS4xNTYyNSBMIDIyLjE1NjI1IDI1IEwgNi4yMTg3NSA0MC45Njg3NSBMIDkuMDMxMjUgNDMuNzgxMjUgTCAyNSAyNy44NDM3NSBMIDQwLjkzNzUgNDMuNzgxMjUgTCA0My43ODEyNSA0MC45Mzc1IEwgMjcuODQzNzUgMjUgTCA0My42ODc1IDkuMTU2MjUgTCA0MC44NDM3NSA2LjMxMjUgTCAyNSAyMi4xNTYyNSBaIi8+PC9zdmc+");
+}
+  .food-content h3{font-size:24px;}
 }

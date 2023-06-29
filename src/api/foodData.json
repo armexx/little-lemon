@@ -1,0 +1,23 @@
+[
+    {
+        "key": "1",
+        "name": "Greek Salad",
+        "price": "$12.99",
+        "description": "The famous Greek salad of crispy lettuce, peppers, olives, and our Chicago-style feta cheese, garnished with crunchy garlic and rosemary croutons.",
+        "pic": "https://raw.githubusercontent.com/armexx/api/main/images/greek-salad.webp"
+    },
+    {
+        "key": "2",
+        "name": "Bruschetta",
+        "price": "$6.99",
+        "description": "Our Bruschetta is made from grilled bread that has been spread with garlic and seasoned with salt and olive oil.",
+        "pic": "https://raw.githubusercontent.com/armexx/api/main/images/brushetta.webp"
+    },
+    {
+        "key": "3",
+        "name": "Lemon Dessert",
+        "price": "$5.29",
+        "description": "This comes straight from grandma's recipe book, every last ingredient has been sourced and is as authentic as can be imagined.",
+        "pic": "https://raw.githubusercontent.com/armexx/api/main/images/lemon-dessert.webp"
+    }
+]
